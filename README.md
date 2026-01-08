@@ -1,6 +1,6 @@
 # Google Sheets로 Web 데이터 추출하기
 
-[![Bright Data Promo](https://github.com/luminati-io/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/)
+[![Bright Data Promo](https://github.com/bright-kr/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.co.kr/)
 
 코딩 경험 없이도 웹사이트에서 유용한 데이터를 추출할 수 있도록, Google Sheets의 [IMPORTXML](https://support.google.com/docs/answer/3093342?hl=en) 및 [IMPORTHTML](https://support.google.com/docs/answer/3093339?hl=en) 함수를 활용하는 방법을 알아보겠습니다.
 
@@ -30,7 +30,7 @@ Google Sheets는 프로그래밍 지식 없이도 데이터 추출을 수행할 
 
 시작하려면 [https://sheets.google.com](https://sheets.google.com/) 로 이동한 뒤 **+** 아이콘을 선택하여 새 스프레드시트를 시작합니다.
 
-![Google Sheets new document creation](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-24-1024x241.png)
+![Google Sheets new document creation](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-24-1024x241.png)
 
 Webスクレイピング 기법 학습을 위해 특별히 설계된 데모 사이트인 [**Books to Scrape**](https://books.toscrape.com/catalogue/category/books/default_15/index.html)를 사용해 보겠습니다.
 
@@ -54,7 +54,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 
 이 함수를 처음 사용할 때 Google Sheets는 외부 사이트에 연결하기 위한 권한을 요청합니다.
 
-![Google Sheets access permission dialog](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-25-1024x272.png)
+![Google Sheets access permission dialog](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-25-1024x272.png)
 
 **Allow access**를 클릭하면 셀에 대상 페이지의 H1 제목 콘텐츠인 "Default"가 표시됩니다.
 
@@ -74,7 +74,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 
 이 수식은 스프레드시트에 전체 도서 목록을 채웁니다.
 
-![Imported book list in Google Sheets](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-26-1024x557.png)
+![Imported book list in Google Sheets](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-26-1024x557.png)
 
 ## 단계별 데이터 추출 가이드
 
@@ -82,7 +82,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 
 먼저 스프레드시트에 적절한 열 헤더를 설정합니다.
 
-![Google Sheets with column headers](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-27-1024x425.png)
+![Google Sheets with column headers](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-27-1024x425.png)
 
 도서 제목에 대한 올바른 XPath를 찾기 위해 브라우저의 개발자 도구를 사용합니다.
 
@@ -91,7 +91,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 3. 하이라이트된 HTML 요소를 마우스 오른쪽 버튼으로 클릭합니다.
 4. **Copy > XPath**를 선택합니다.
 
-![Finding XPath using browser developer tools](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-28-1024x498.png)
+![Finding XPath using browser developer tools](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-28-1024x498.png)
 
 단일 도서 제목에 대한 원시 XPath는 다음과 같이 보일 수 있습니다.
 
@@ -113,7 +113,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 
 시트에 모든 도서 제목이 채워집니다.
 
-![Google Sheets showing imported book titles](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-29-1024x557.png)
+![Google Sheets showing imported book titles](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-29-1024x557.png)
 
 다음으로 셀 B2에 가격 데이터 수식을 추가합니다.
 
@@ -129,7 +129,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 
 완성된 스프레드시트에는 세 가지 데이터 포인트가 모두 표시됩니다.
 
-![Complete spreadsheet with book data](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-30-1024x557.png)
+![Complete spreadsheet with book data](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-30-1024x557.png)
 
 평점은 `star-rating Three` 또는 `star-rating Four`처럼 표시됩니다. 안타깝게도 Google Sheets는 [XPath 2.0](https://www.w3.org/TR/xpath20/)을 지원하지 않으므로, 수식에서 이 데이터를 직접 변환할 수 없습니다.
 
@@ -155,11 +155,11 @@ Google Sheets에서 업데이트 빈도를 구성하려면 다음을 수행합�
 2. **Calculation** 탭으로 이동합니다.
 3. 원하는 재계산 간격을 설정합니다.
 
-![Google Sheets settings menu](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-31-1024x558.png)
+![Google Sheets settings menu](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-31-1024x558.png)
 
 1분 또는 1시간 새로고침 간격 중에서 선택할 수 있습니다.
 
-![Google Sheets recalculation settings](https://github.com/luminati-io/web-scraping-with-google-sheets/blob/main/images/image-32-1024x619.png)
+![Google Sheets recalculation settings](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-32-1024x619.png)
 
 Google Sheets는 이 두 가지 새로고침 옵션으로 제한되지만, Bright Data와 같은 전용 スクレイピング 솔루션은 더 유연한 스케줄링을 제공하며 여러 형식(JSON, CSV, Parquet)으로 데이터를 제공하므로 엔터프라이즈 규모의 데이터 수집에 적합합니다.
 
