@@ -4,15 +4,15 @@
 
 코딩 경험 없이도 웹사이트에서 유용한 데이터를 추출할 수 있도록, Google Sheets의 [IMPORTXML](https://support.google.com/docs/answer/3093342?hl=en) 및 [IMPORTHTML](https://support.google.com/docs/answer/3093339?hl=en) 함수를 활용하는 방법을 알아보겠습니다.
 
-- [Google Sheets를 Webスクレイピング에 활용하는 이점](#benefits-of-google-sheets-for-web-scraping)
-- [첫 번째 スクレイピング 시트 만들기](#creating-your-first-scraping-sheet)
-- [필수 Google Sheets スクレイピング 함수](#essential-google-sheets-scraping-functions)
+- [Google Sheets를 Web스크레이핑에 활용하는 이점](#benefits-of-google-sheets-for-web-scraping)
+- [첫 번째 스크레이핑 시트 만들기](#creating-your-first-scraping-sheet)
+- [필수 Google Sheets 스크레이핑 함수](#essential-google-sheets-scraping-functions)
   - [IMPORTXML 사용하기](#using-importxml)
   - [IMPORTHTML 활용하기](#working-with-importhtml)
 - [단계별 데이터 추출 가이드](#step-by-step-data-extraction-guide)
 - [제한 사항 및 고급 시나리오](#limitations-and-advanced-scenarios)
 - [자동 데이터 업데이트 설정](#setting-up-automatic-data-updates)
-- [スクレイピング 프로세스 최적화](#optimizing-your-scraping-process)
+- [스크레이핑 프로세스 최적화](#optimizing-your-scraping-process)
 - [다음 단계](#next-steps)
 
 ## Google Sheets를 Web Scraping에 활용하는 이점
@@ -32,11 +32,11 @@ Google Sheets는 프로그래밍 지식 없이도 데이터 추출을 수행할 
 
 ![Google Sheets new document creation](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-24-1024x241.png)
 
-Webスクレイピング 기법 학습을 위해 특별히 설계된 데모 사이트인 [**Books to Scrape**](https://books.toscrape.com/catalogue/category/books/default_15/index.html)를 사용해 보겠습니다.
+Web스크레이핑 기법 학습을 위해 특별히 설계된 데모 사이트인 [**Books to Scrape**](https://books.toscrape.com/catalogue/category/books/default_15/index.html)를 사용해 보겠습니다.
 
 ## 필수 Google Sheets Scraping Functions
 
-Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가능하게 하는 여러 강력한 [수식](https://support.google.com/docs/table/25273?hl=en)이 포함되어 있습니다. 여기서는 Webスクレイピング에 가장 유용한 두 가지 함수를 살펴보겠습니다.
+Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가능하게 하는 여러 강력한 [수식](https://support.google.com/docs/table/25273?hl=en)이 포함되어 있습니다. 여기서는 Web스크레이핑에 가장 유용한 두 가지 함수를 살펴보겠습니다.
 
 ### IMPORTXML 사용하기
 
@@ -135,7 +135,7 @@ Google Sheets에는 스프레드시트 내에서 직접 데이터 추출을 가�
 
 ## 제한 사항 및 고급 시나리오
 
-Google Sheets는 기본적인 スクレイピング에는 잘 작동하지만 다음과 같은 경우에는 중요한 제한이 있습니다.
+Google Sheets는 기본적인 스크레이핑에는 잘 작동하지만 다음과 같은 경우에는 중요한 제한이 있습니다.
 
 **동적 콘텐츠**: 웹사이트가 초기 페이지 렌더링 이후 JavaScript로 데이터를 로드하는 경우, Google Sheets 수식은 정적 HTML만 처리하므로 해당 콘텐츠를 캡처하지 못합니다. 동적 사이트의 경우 headless browser를 사용하는 Python 스크립트가 필요합니다.
 
@@ -143,7 +143,7 @@ Google Sheets는 기본적인 スクレイピング에는 잘 작동하지만 �
 
 **인터랙티브 요소**: 데이터를 표시하기 전에 클릭, 스크롤 또는 폼 제출이 필요한 웹사이트는 Google Sheets의 기능 범위를 벗어납니다.
 
-이러한 고급 시나리오에서는 プロキシ, CAPTCHA, user agent 로ーテ이션을 자동으로 처리하는 Bright Data의 포괄적인 スクレイピング 솔루션을 고려해 보시기 바랍니다.
+이러한 고급 시나리오에서는 프록시, CAPTCHA, user agent 로ーテ이션을 자동으로 처리하는 Bright Data의 포괄적인 스크레이핑 솔루션을 고려해 보시기 바랍니다.
 
 ## 자동 데이터 업데이트 설정
 
@@ -161,24 +161,24 @@ Google Sheets에서 업데이트 빈도를 구성하려면 다음을 수행합�
 
 ![Google Sheets recalculation settings](https://github.com/bright-kr/web-scraping-with-google-sheets/blob/main/images/image-32-1024x619.png)
 
-Google Sheets는 이 두 가지 새로고침 옵션으로 제한되지만, Bright Data와 같은 전용 スクレイピング 솔루션은 더 유연한 스케줄링을 제공하며 여러 형식(JSON, CSV, Parquet)으로 데이터를 제공하므로 엔터프라이즈 규모의 데이터 수집에 적합합니다.
+Google Sheets는 이 두 가지 새로고침 옵션으로 제한되지만, Bright Data와 같은 전용 스크레이핑 솔루션은 더 유연한 스케줄링을 제공하며 여러 형식(JSON, CSV, Parquet)으로 데이터를 제공하므로 엔터프라이즈 규모의 데이터 수집에 적합합니다.
 
 ## Scraping Process 최적화
 
-スクレイピング 효율을 개선하고 잠재적 이슈를 줄이려면 다음을 고려하시기 바랍니다.
+스크레이핑 효율을 개선하고 잠재적 이슈를 줄이려면 다음을 고려하시기 바랍니다.
 
 **선별적으로 추출하기**: 필요한 특정 데이터 포인트만 추출하고, 대상 웹사이트에 불필요한 부하를 주지 않도록 합니다.
 
-**지연 적용하기**: 대규모 프로젝트의 경우 リクエスト 사이에 일시 정지를 추가하고, レート制限 또는 IP 차단을 유발하지 않도록 비혼잡 시간대에 스케줄링합니다.
+**지연 적용하기**: 대규모 프로젝트의 경우 요청 사이에 일시 정지를 추가하고, 속도 제한 또는 IP 차단을 유발하지 않도록 비혼잡 시간대에 스케줄링합니다.
 
-**アンチスクレイピング 대응**: 많은 사이트가 자동화된 접근을 탐지하기 위해 CAPTCHA 챌린지를 사용합니다. 민감한 スクレイピング 작업의 경우 [자동 IP 로ーテ이션을 제공하는 プロキシ](https://brightdata.co.kr/solutions/rotating-proxies) 사용을 고려하시기 바랍니다.
+**アンチ스크레이핑 대응**: 많은 사이트가 자동화된 접근을 탐지하기 위해 CAPTCHA 챌린지를 사용합니다. 민감한 스크레이핑 작업의 경우 [자동 IP 로ーテ이션을 제공하는 프록시](https://brightdata.co.kr/solutions/rotating-proxies) 사용을 고려하시기 바랍니다.
 
-**법적 요구사항 검토하기**: スクレイピング 전에 항상 웹사이트의 이용약관과 [`robots.txt`](https://brightdata.co.kr/blog/how-tos/robots-txt-for-web-scraping-guide) 파일을 확인하시기 바랍니다.
+**법적 요구사항 검토하기**: 스크레이핑 전에 항상 웹사이트의 이용약관과 [`robots.txt`](https://brightdata.co.kr/blog/how-tos/robots-txt-for-web-scraping-guide) 파일을 확인하시기 바랍니다.
 
 ## Next Steps
 
-Google Sheets는 특히 구조화된 데이터를 가진 정적 웹사이트에 대해 Webスクレイピング을 시작하기 위한 훌륭한 진입점을 제공합니다.
+Google Sheets는 특히 구조화된 데이터를 가진 정적 웹사이트에 대해 Web스크레이핑을 시작하기 위한 훌륭한 진입점을 제공합니다.
 
-동적 콘텐츠, 대용량, 또는 정교한 [アンチスクレイピング 대책](https://brightdata.co.kr/blog/web-data/anti-scraping-techniques)이 필요한 더 복잡한 요구사항의 경우, [Bright Data's Web Scraper API](https://brightdata.co.kr/products/web-scraper)는 プロキシ, CAPTCHA, 그리고 다양한 출력 형식에 대한 내장 처리를 제공하는 확장 가능한 솔루션을 제공합니다.
+동적 콘텐츠, 대용량, 또는 정교한 [アンチ스크레이핑 대책](https://brightdata.co.kr/blog/web-data/anti-scraping-techniques)이 필요한 더 복잡한 요구사항의 경우, [Bright Data's Web Scraper API](https://brightdata.co.kr/products/web-scraper)는 프록시, CAPTCHA, 그리고 다양한 출력 형식에 대한 내장 처리를 제공하는 확장 가능한 솔루션을 제공합니다.
 
 지금 무료 체험에 가입하고 데이터 워크플로우 최적화를 시작해 보시기 바랍니다!
